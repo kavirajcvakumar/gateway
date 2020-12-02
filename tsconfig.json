@@ -1,24 +1,26 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "lib": [
-      "esnext"
-    ],
-    "target": "es2017",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noUnusedLocals": true,
-    "allowSyntheticDefaultImports": true,
-    "noUnusedParameters": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
-    "outDir": "lib",
+    "declaration": false,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
     "typeRoots": [
-      "node_modules/@types",
-      "node_modules/**/*.d.ts"
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
     ]
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
 }
